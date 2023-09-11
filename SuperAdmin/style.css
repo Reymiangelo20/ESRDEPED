@@ -1,0 +1,899 @@
+body{
+  font-family: roboto, arial;
+}
+/* -------------header------------------ */
+.heads{
+  border-bottom: 1px solid rgb(197, 197, 197);
+  /* border: 1px solid red; */
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin-left: 13em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15.5px 15px 15.5px 15px;
+  font-size: larger;
+  transition: all .5s ease;
+  padding-bottom: 25px;
+}
+.title-page-div{
+  
+}
+
+.page-title{
+  font-weight: 500;
+  color: rgb(88, 88, 88);
+  margin-bottom: 0px;
+  font-size: 1.3em;
+}
+
+.logout-div{
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+}
+
+.logout-p{
+  color: rgb(151, 151, 151);
+  text-decoration: none;
+}
+
+.logout-p:hover{
+  color: rgb(151, 151, 151);
+  text-decoration: none;
+}
+
+.fa-right-from-bracket{
+  margin-right: 3px;
+  color: gray;
+}
+
+
+
+/* -------------------side bar---------- */
+.link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.side-bar-div{
+  /* border: 1px solid blue; */
+  position: fixed;
+  top: 0;
+  /* left: 0; */
+  left: 0px;
+  bottom: 0px;
+  width: 90px;
+  /* width: 250px; */
+  color: white;
+  background-color: rgb(32, 121, 255);
+  transition: all .5s ease;
+}
+
+#check{
+  display: none;
+}
+
+
+label #btn, label #cancel{
+  position: absolute;
+  cursor: pointer;
+  /* background-color: #042331; */
+  background-color: transparent;
+  border-radius: 3px;
+}
+
+label #btn{
+  left: 15px;
+  top: 25px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  transition: all .5s step-end;
+  z-index: 100;
+}
+
+label #cancel{
+  z-index: 1111;
+  left: -195px;
+  top: 25px;
+  font-size: 35px;
+  /* color: #0a5275; */
+  color: white;
+  padding: 6px 12px;
+  transition: all 0.5s step-end;
+  z-index: 100;
+}
+
+#check:checked ~ .side-bar-div{
+  left: 0;
+  width: 250px;
+  /* width: 90px; */
+}
+
+#check:checked ~ label #btn{
+  /* left: 250px; */
+  left: 90px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#check:checked ~ label #cancel{
+  left: 15px;
+}
+
+#check:not(:checked) ~ .main-container-div{
+  left: 6em;
+}
+
+#check:not(:checked) ~ .heads{
+  margin-left: 4.3em;
+}
+
+#check:not(:checked) ~ .side-bar-div .website-name-div img{
+  visibility: hidden;
+}
+
+#check:not(:checked) ~ .side-bar-div .side-bar-options-div .dashboard-option-div p,
+#check:not(:checked) ~ .side-bar-div .side-bar-options-div .admin-accounts-option-div p,
+#check:not(:checked) ~ .side-bar-div .side-bar-options-div .logs-option-div p,
+#check:not(:checked) ~ .side-bar-div .side-bar-options-div .inactive-employee-option-div p,
+#check:not(:checked) ~ .side-bar-div .side-bar-options-div .active-employee-option-div p,
+#check:not(:checked) ~ .side-bar-div .side-bar-options-div .settings-option-div p,
+#check:not(:checked) ~ .side-bar-div .side-bar-options-div .export-file-option-div p,
+#check:not(:checked) ~ .side-bar-div .side-bar-options-div .export-service-record span,
+#check:not(:checked) ~ .side-bar-div .side-bar-options-div .import-file-option-div p
+{
+  display: none;
+}
+.website-name-div{
+  /* border: 1px solid red; */
+  text-align: center;
+  font-size: larger;
+  font-weight: 500;
+  border-bottom: 1px solid rgb(219, 219, 219);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.website-name-div .insignia-img{
+  width: 100px;
+  height: 78px;
+  object-fit: contain;
+  padding: 10px 10px 11px 10px;
+  /* object-position: center; */
+}
+
+.website-name{
+  /* margin-left: 5px; */
+  /* text-transform: uppercase; */
+}
+
+.side-bar-options-div{
+  /* padding: 5px 5px 5px 5px; */
+  padding: 10px;
+  
+}
+
+.dashboard-option-div, 
+.admin-accounts-option-div, 
+.logs-option-div, 
+.inactive-employee-option-div, 
+.active-employee-option-div,
+.settings-option-div,
+.export-file-option-div,
+.import-file-option-div{
+  padding: 20px;
+  text-transform: uppercase;
+  font-size: 15px;
+  /* border: 1px solid red; */
+  transition: background-color .33s;
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+  position: relative;
+}
+
+.dashboard-option-div p, 
+.admin-accounts-option-div p, 
+.logs-option-div p, 
+.inactive-employee-option-div p, 
+.active-employee-option-div p,
+.settings-option-div p,
+.export-file-option-div p
+.import-file-option-div p{
+  margin-bottom: 0px;
+  /* transition: all 5s ease; */
+  /* transition: display 5s; */
+}
+
+.dashboard-option-div:hover, 
+.admin-accounts-option-div:hover, 
+.logs-option-div:hover, 
+.inactive-employee-option-div:hover, 
+.active-employee-option-div:hover,
+.settings-option-div:hover,
+.export-file-option-div:hover,
+.import-file-option-div:hover{
+  background-color: rgb(49, 104, 255);
+}
+
+
+.sidebar-dashboard-hidden-div, 
+.sidebar-admin-hidden-div,
+.sidebar-logs-hidden-div,
+.sidebar-inactive-hidden-div,
+.sidebar-active-hidden-div,
+.sidebar-export-hidden-div,
+.sidebar-service-hidden-div,
+.sidebar-personal-hidden-div,
+.sidebar-settings-hidden-div,
+.sidebar-import-hidden-div{
+  z-index: 1000;
+  position: absolute;
+  display: none;
+  transition: all 0.5s;
+  background-color: rgba(128, 128, 128, 0.663);
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+}
+
+.sidebar-dashboard-hidden-div
+{
+  left: -5px;
+  top: 2em;
+}
+
+.sidebar-admin-hidden-div{
+  left: -5px;
+  top: 6em;
+}
+
+.sidebar-logs-hidden-div{
+  left: -5px;
+  top: 10em;
+}
+
+.sidebar-inactive-hidden-div{
+  left: -5px;
+  top: 14em;
+}
+
+.sidebar-active-hidden-div{
+  left: -5px;
+  top: 18em;
+}
+
+.sidebar-export-hidden-div{
+  left: -5px;
+  top: 26em;
+}
+
+.sidebar-service-hidden-div{
+  left: -5px;
+  top: 30em;
+}
+
+.sidebar-personal-hidden-div{
+  left: -5px;
+  top: 34em;
+}
+
+.sidebar-settings-hidden-div{
+  left: -5px;
+  top: 22em;
+}
+
+.sidebar-import-hidden-div{
+  left: -5px;
+  top: 30em;
+}
+
+.export-service-record{
+  margin-left: 15px;
+  display: none;
+}
+
+.fa-tachometer-alt, 
+.fa-users, 
+.fa-history, 
+.fa-user-alt-slash, 
+.fa-user,
+.fa-file-export,
+.fa-file-pdf,
+.fa-file-excel,
+.fa-gears,
+.fa-table,
+.fa-file-import{
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* .fa-file-export,
+.fa-gears,
+.fa-file-import{
+  color: rgb(17, 17, 20);
+} */
+
+.fa-file-excel,
+.fa-table{
+  /* color: rgb(5, 187, 5); */
+color: white;
+}
+
+.dashboard-option-div{
+
+}
+
+.admin-accounts-option-div{
+
+}
+
+.logs-option-div{
+
+}
+
+.inactive-employee-option-div{
+
+}
+
+.active-employee-option-div{
+
+}
+
+
+
+/* --- main container ------ */
+
+.main-container-div{
+  /* border: 1px solid red; */
+  position: fixed;
+  right: 0.3em;
+  left: 16em;
+  top: 4em;
+  bottom: 0;
+  transition: all .5s ease;
+}
+
+.main-container-adjust{
+  margin-top: 30px;
+}
+
+.table-container-div{
+  /* border: 1px solid red; */
+}
+
+.display-status-container-div{
+  /* display: flex;
+  justify-content: space-around; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 10px;
+  column-gap: 10px;
+  padding: 10px;
+  
+}
+.admin-title{
+  display: flex;
+  align-items: last baseline;
+  justify-content: space-around;
+  padding-top: 10px;
+  /* background-color: rgb(32, 121, 255); */
+}
+
+
+.admin-title i{
+  font-size: 8em;
+  /* color: rgb(209, 209, 209); */
+  /* color: rgb(0, 0, 179); */
+  color: white;
+}
+
+.admin-title p{
+  font-size: 4em;
+  /* color: rgb(172, 0, 0); */
+  color: white;
+}
+
+.status-title{
+  font-size: 20px;
+  font-weight: 700;
+  border-top: 1px solid rgb(197, 197, 197);
+  padding-top: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  margin-top: -20px;
+  /* display: none; */
+  /* color: rgb(0, 0, 179); */
+}
+
+.admins-div-container, 
+.active-employee-div,
+.inactive-employee-div{
+  border: none;
+  padding: 5px 15px 5px 15px;
+  background-color: rgb(32, 121, 255);
+  position: relative;
+}
+
+/* -----------recent activities----------- */
+
+.recent-activities-div{
+  padding: 10px;
+  /* border: 1px solid red; */
+}
+
+.recent-activities-title{
+  /* border: 1px solid red; */
+  /* background-color: gray; */
+  border-bottom: 1px solid rgb(216, 216, 216);
+  padding: 20px 0px 20px 0px;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: rgb(88, 88, 88);
+}
+
+.recent-activities-main-container{
+  /* border: 1px solid red; */
+  overflow-x: auto;
+  height: 500px;
+}
+
+@media (max-width: 1518px) {
+  .recent-activities-div .recent-activities-main-container{
+      /* border: 1px solid blue; */
+      height: 260px;
+  }
+}
+
+.recent-activities-main-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.recent-activities-main-container::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  
+}
+ 
+.recent-activities-main-container::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+.recent-activities-main-container::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.recent-activity-wrapper{
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+  /* border: 1px solid red; */
+  /* background-color: blue; */
+  background-color: rgb(32, 121, 255);
+}
+
+.activity-icon-div{
+  /* background-color: rgb(0, 116, 0); */
+  padding: 10px;
+  /* height: 100%; */
+  /* border: 1px solid green; */
+  margin-right: 2px;
+}
+
+.activity-icon-div i{
+  font-size: 4em;
+  color: white;
+}
+
+i.fa-right-from-bracket{
+  color: gray;
+}
+
+/* i.fa-file-pen{
+  font-size: 5.4em;
+}
+
+i.fa-plus{
+  font-size: 5em;
+}
+
+i.fa-trash-can{
+  font-size: 6em;
+  padding-right: 12px;
+}
+
+i.fa-envelope-open-text{
+  font-size: 6.1em;
+}
+
+i.fa-user-pen{
+  font-size: 4.95em;
+}
+
+i.fa-user-plus{
+  font-size: 4.9em;
+}
+
+i.fa-user-minus{
+  font-size: 4.9em;
+} */
+
+
+i#add-icon{
+  font-size: 5em;
+  padding-right: 16px;
+  padding-left: 12px;
+}
+
+i#trash-icon{
+  font-size: 5.2em;
+  padding-right: 25px;
+}
+
+i#request-icon{
+  font-size: 5.1em;
+  padding-right: 16px;
+}
+
+i#add-user-icon{
+  font-size: 4.9em;
+}
+
+i#delete-user-icon{
+  font-size: 4.9em;
+}
+
+i#update-user-icon{
+  font-size: 4.95em;
+}
+
+i#edit-icon{
+  font-size: 5.2em;
+  padding-right: 5px;
+}
+
+i#login-user-icon{
+  font-size: 5.2em;
+  padding-right: 15px;
+}
+
+.recent-activity-content{
+  /* border: 1px solid blue; */
+  width: 100%;
+  
+}
+
+.recent-activity-header{
+  /* border: 1px solid blue; */
+  /* background-color: rgb(214, 214, 214); */
+  background-color: white;
+  border-bottom: 1px solid rgb(214, 214, 214);
+  border-top: 1px solid rgb(214, 214, 214);
+  color: rgb(63, 63, 63);
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px 0px 10px;
+}
+
+.recent-activity-body{
+  background-color: white;
+  border: 1px solid white;
+  padding: 10px;
+  box-shadow: 0px 2.6px 1px rgba(0, 0, 0, 0.25);
+}
+
+/* -------Administrators style------- */
+
+.submit-div{
+  position: relative;
+  display: flex;
+  justify-content: start;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.submit-div i{
+  color: white;
+}
+
+.note-checkbox{
+  font-size: 14px;
+  color: gray;
+}
+.note-word{
+  color: red;
+}
+
+.submit-div button{
+  border: none;
+  /* border: 1px solid red; */
+  background-color: green;
+  /* background-color: #09c372; */
+  color: white;
+  padding: 10px;
+  text-transform: uppercase;
+  font-family: Roboto, Arial;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: background-color .50s;
+  cursor: pointer;
+  outline: none;
+  /* z-index: 100; */
+}
+
+#registration-button{
+  background-color: green;
+  border-color: green;
+}
+
+/* -----All modal style------ */
+
+.submit-div button:hover{
+  /* border: 1px solid green; */
+  background-color: rgb(0, 154, 0);
+}
+
+.modal-header{
+  /* background-color: rgb(32, 73, 255); */
+  background-color: rgb(32, 121, 255);
+  color: white;
+  text-transform: uppercase;
+}
+
+.modal-header button{
+  color: white;
+}
+
+
+
+/* --------Error hander style--------- */
+
+.check-box-div{
+  margin-bottom: 20px;
+}
+
+.form-group{
+  margin-bottom: 10px;
+}
+
+.form-group input{
+  /* position: relative; */
+  /* border: 1px solid blue; */
+  height: 50px;
+  border: 1px solid rgb(157, 156, 156);
+}
+
+.form-group select:disabled {
+  background-color: transparent;
+  cursor: not-allowed;
+  color: gray;
+  /* border: 3px double;
+  border-color: blue yellow red; */
+}
+
+.form-group select{
+  height: 50px;
+  border: 1px solid rgb(157, 156, 156);
+}
+
+.form__label{
+  /* font-weight: 500; */
+  position: absolute;
+
+  top: 0.6rem;
+  font-size: 15px;
+  left: 0.8rem;
+  color: rgb(131, 131, 131);
+  /* font-weight: bold; */
+  
+  padding-left: 2px;
+  padding-right: 2px;
+  cursor: text;
+  background-color: white;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in, background-color 200ms ease-in, color 200ms ease-in;
+}
+
+.select_form_label{
+  /* font-weight: 500; */
+  position: absolute;
+
+  top: -0.6rem;
+  font-size: 0.9rem;
+  left: 0.8rem;
+  color: black;
+  font-weight: bold;
+  
+  padding-left: 2px;
+  padding-right: 2px;
+  cursor: text;
+  background-color: white;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in, background-color 200ms ease-in, color 200ms ease-in;
+}
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+top: -0.6rem;
+font-size: 0.9rem;
+left: 0.7rem;
+color: black;
+font-weight: bold;
+}
+
+/* No record table data style */
+
+.no-record-td{
+
+  text-align: center;
+  font-size: 5em;
+  position: relative;
+}
+
+.no-record-td p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.no-record-bg{
+  height: 500px;
+  object-fit: cover;
+  opacity: 0.1;
+}
+
+/* Settings */
+
+.settings-container-div{
+  /* border: 1px solid red; */
+
+  display: grid;
+  /* grid-template-rows: 1fr 1fr; */
+  /* column-gap: 10px; */
+}
+
+.enterDistrictDiv{
+  display: flex;
+}
+
+.enterSchool, .enterDistrict, .enterEditSchool{
+  width: 100%;
+  border-radius: 3px 0px 0px 3px;
+  padding: 10px;
+  outline: none;
+  position: relative;
+}
+
+.enterDistrictDiv i{
+  /* visibility: visible; */
+  right: 6em;
+}
+
+.configureButton{
+  border: none;
+  color: white;
+  background-color: rgb(3, 146, 3);
+  padding: 10px 20px 10px 20px;
+  border-radius: 0px 3px 3px 0px;
+  cursor: pointer;
+}
+
+.configDelete{
+  background-color: rgb(241, 37, 37);
+  /* width: 70px; */
+  text-align: center;
+  padding: 10px 13px 13px 10px;
+  /* margin-left: -10px; */
+}
+
+.configEdit{
+  background-color: rgb(75, 44, 248);
+}
+
+.enterDistrictDiv select{
+  /* width: 100%; */
+  /* width: 150px; */
+  margin-right: 1px;
+  border-radius: 3px 0px 0px 3px;
+}
+
+.enterDistrictDiv input{
+  /* margin-bottom: 10px; */
+}
+
+.setting-title{
+  font-weight: 500;
+}
+
+.addSchoolContainer, .editDistrictContainer, .editSchoolContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5px;
+}
+
+.configEdit{
+  background-color: rgb(58, 58, 255);
+}
+
+.enterDistrictDiv.fa-user-plus{
+  color: red;
+  visibility: visible;
+}
+
+/* ------Import file------ */
+
+.import-container{
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.personalinfo-import-div, .servicerecord-import-div{
+  display: flex;
+  position: relative;
+}
+
+.personalinfo-import-div input, .servicerecord-import-div input{
+  display: none;
+}
+
+.personalinfo-import-div label, .servicerecord-import-div label{
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  border: 1px solid rgb(117, 122, 133);
+  padding: 40px 65px 40px 65px;
+  font-size: 20px;
+  text-align: center;
+  transition: all 0.35s;
+  z-index: 10;
+}
+
+.personalinfo-import-div label:hover, .servicerecord-import-div label:hover{
+  background-color: rgb(170, 170, 170);
+  color: white;
+  border: 1px solid white;
+}
+
+.personalinfo-import-div button, .servicerecord-import-div button{
+  width: 100%;
+  border: none;
+  background-color: green;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.35s;
+}
+
+.personalinfo-import-div button:hover, .servicerecord-import-div button:hover{
+  background-color: rgb(5, 99, 5);
+}
+
+.fa-file-arrow-up{
+  position: absolute;
+  color: rgba(128, 128, 128, 0.171);
+  font-size: 4.5em;
+  bottom: 0.7em;
+}
+
+.personalinfo-import-div{
+  
+}
+
+.servicerecord-import-div{
+
+}

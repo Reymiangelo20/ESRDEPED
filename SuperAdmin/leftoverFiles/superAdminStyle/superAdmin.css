@@ -1,0 +1,530 @@
+body{
+    font-family: Roboto, Arial;
+    background-color: white;
+}
+
+/* Header starts here */
+.dashboard-header-div{
+    /* background-color: rgb(63, 63, 63); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px 5px 5px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.dashbaord-title-div{
+
+}
+
+.dashbaord-title-div p{
+    color: rgb(67, 101, 255);
+    font-weight: 700;
+}
+
+.search-logout{
+    display: flex;
+    align-items: center;
+}
+
+/* Header ends here */
+/* ------------------------------- */
+/* Sidebar starts here */
+.dashboard-sidebar-div{
+    position: fixed;
+    top: 50px;
+    left: 0px;
+    padding-left: 10px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    padding-top: 0.8em;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* z-index: 10; */
+    /* background-color: rgb(63, 63, 63); */
+    /* border: 1px solid red; */
+}
+
+.dashboard-homepage-div, 
+.dashboard-admin-regitration-div, 
+.dashboard-admin-list-div, 
+.dashboard-admin-log-div,
+.dashboard-admin-inactive-div{
+    display: flex;
+    align-items: center;
+    color: rgb(128, 151, 255);
+    margin-bottom: 2em;
+}
+
+.dashboard-homepage-div a, 
+.dashboard-admin-regitration-div a,
+.dashboard-admin-list-div a,
+.dashboard-admin-log-div a,
+.dashboard-admin-inactive-div a{
+    text-decoration: none;
+    color: rgb(128, 151, 255);
+    margin-left: 10px;
+    padding-top: 3px;
+}
+
+.dashboard-homepage-div p, 
+.dashboard-admin-regitration-div p, 
+.dashboard-admin-list-div p,
+.dashboard-admin-log-div p,
+.dashboard-admin-inactive-div p{
+    margin-left: 10px;
+    padding-top: 3px;
+    cursor: pointer;
+}
+
+.dashboard-homepage-div p:hover, 
+.dashboard-admin-regitration-div p:hover, 
+.dashboard-admin-list-div p:hover,
+.dashboard-admin-log-div p:hover,
+.dashboard-admin-inactive-div p:hover{
+    text-decoration: underline;
+}
+
+.dashboard-homepage-div p:focus, 
+.dashboard-admin-regitration-div p:focus, 
+.dashboard-admin-list-div p:focus,
+.dashboard-admin-log-div p:focus,
+.dashboard-admin-inactive-div p:focus{
+    text-decoration: underline;
+}
+
+.fa-tachometer-alt, 
+.fa-user-plus, 
+.fa-users, 
+.fa-history, 
+.fa-user-alt-slash, 
+.fa-right-from-bracket{
+    color: rgb(91, 121, 255);
+}
+
+.dashboard-logout-div{
+    color: rgb(128, 151, 255);
+}
+
+.dashboard-logout-div a{
+    text-decoration: none;
+    color: rgb(128, 151, 255);
+}
+
+/* Sidebar ends here */
+
+/* ------------------------------- */
+
+/* Dashboard content starts here */
+
+.dashboard-content-div{
+    margin-top: 56px;
+    margin-left: 210px;
+    /* margin-right: 50px; */
+    /* border: 1px solid red; */
+    position: relative;
+    padding-right: 10px;
+    padding-left: 10px;
+    /* overflow-y: auto;
+    height: 800px; */
+
+}
+
+.dashboard-display{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    /* display: none; */
+}
+
+.daschboard-admin-accounts{
+    background-color: rgb(221, 117, 57);
+    position: relative;
+}
+
+.link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+.dashboard-inactive-teachers{
+    background-color: rgb(240, 230, 38);
+    position: relative;
+}
+
+.dashboard-log-history{
+    background-color: rgb(97, 108, 112);
+    position: relative;
+}
+
+.daschboard-admin-accounts, 
+.dashboard-inactive-teachers, 
+.dashboard-log-history{
+    padding: 20px 20px 10px 5px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.fa-user-cog, 
+.fa-user-times, 
+.fa-user-check{
+    font-size: 5em;
+}
+
+.dashboard-display-count{
+    font-size: 2.6em;
+}
+
+/* Dashboard content ends here */
+/* ---------------------------------------- */
+/* Register admin starts here */
+.check-box-div{
+    margin-bottom: 20px;
+}
+
+.form-group{
+    margin-bottom: 10px;
+}
+
+.form-group input{
+    /* position: relative; */
+    /* border: 1px solid blue; */
+    height: 50px;
+    border: 1px solid rgb(157, 156, 156);
+}
+
+.form-group select:disabled {
+    background-color: transparent;
+    cursor: not-allowed;
+    color: gray;
+    /* border: 3px double;
+    border-color: blue yellow red; */
+  }
+
+.form-group select{
+    height: 50px;
+    border: 1px solid rgb(157, 156, 156);
+}
+
+.form__label{
+    /* font-weight: 500; */
+    position: absolute;
+
+    top: 0.6rem;
+    font-size: 15px;
+    left: 0.8rem;
+    color: rgb(131, 131, 131);
+    /* font-weight: bold; */
+    
+    padding-left: 2px;
+    padding-right: 2px;
+    cursor: text;
+    background-color: white;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in, background-color 200ms ease-in, color 200ms ease-in;
+}
+
+.select_form_label{
+    /* font-weight: 500; */
+    position: absolute;
+
+    top: -0.6rem;
+    font-size: 0.9rem;
+    left: 0.8rem;
+    color: black;
+    font-weight: bold;
+    
+    padding-left: 2px;
+    padding-right: 2px;
+    cursor: text;
+    background-color: white;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in, background-color 200ms ease-in, color 200ms ease-in;
+}
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+  top: -0.6rem;
+  font-size: 0.9rem;
+  left: 0.7rem;
+  color: black;
+  font-weight: bold;
+}
+
+/* Register admin ends here */
+
+/* -------------------------- */
+
+/* number of records starts here*/
+
+.num-records-container-div{
+    /* background-color: rgb(223, 219, 219); */
+    margin-bottom: 10px;
+    
+}
+
+.num-records-container-div h2{
+    font-size: 1.3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(72, 72, 72);
+    padding: 10px;
+    /* border: 1px solid red; */
+}
+/* number of records ends here */
+
+/* search record starts here */
+.table-search-div{
+    
+}
+/* search record ends here */
+
+
+/* adjustments */
+
+.main-container-adjust{
+    /* color: red; */
+    /* font-size: 13px; */
+}
+
+
+.submit-div{
+    position: relative;
+    display: flex;
+    justify-content: start;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.submit-div i{
+    color: white;
+}
+
+.submit-div button{
+    border: none;
+    /* border: 1px solid red; */
+    background-color: green;
+    /* background-color: #09c372; */
+    color: white;
+    padding: 10px;
+    text-transform: uppercase;
+    font-family: Roboto, Arial;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: background-color .50s;
+    cursor: pointer;
+    outline: none;
+    /* z-index: 100; */
+}
+
+.submit-div button:hover{
+    /* border: 1px solid green; */
+    background-color: rgb(0, 154, 0);
+}
+
+.first-layer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3px;
+}
+
+.second-layer{
+
+}
+
+.third-layer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3px;
+}
+
+.district-school-div{
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px; */
+}
+
+.note-checkbox{
+    font-size: 14px;
+    color: gray;
+}
+.note-word{
+    color: red;
+}
+/* .logs{
+   margin-left: 220px;
+   margin-top: 20px;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   margin-right: 20px;
+   
+  
+   
+  
+}
+
+table{
+    border-collapse: collapse;
+    margin: 5px;
+    
+ 
+}
+tr,td{
+    padding: 30px;
+    
+    font-size: 20px;
+    text-align: center;
+    background-color: rgb(32, 73, 255);
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.50s;
+    color: #ffffff;
+    border-radius: 20px;
+} */
+
+/* Recent activity starts here */
+    .recent-activity{
+        /* border: 1px solid red; */
+        margin-left: 13em;
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .recent-activity-container{
+        /* border: 1px solid rgb(23, 23, 23); */
+        /* background-color: blue; */
+        margin-bottom: 10px;
+        
+    }
+
+    .recent-activity-header{
+        /* border: 1px solid green; */
+        background-color: rgb(0, 81, 255);
+        border-radius: 3px 3px 0px 0px;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        padding: 10px;
+    }
+
+    .activity-type-continer{
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .time-data-container{
+        display: flex;
+        
+    }
+
+    /* .recent-activity-date{
+        
+    } */
+
+    .body-footer-container{
+        box-shadow: 0px 2px 5px rgba(0 , 0, 0, 0.50);
+        padding: 10px;
+        
+    }
+
+    .recent-activity-time{
+        /* border: 1px solid orange; */
+    }
+    .recent-activity-body{
+        color: rgb(90, 90, 90);
+        /* text-transform:; */
+        /* border: 1px solid black; */
+    }
+
+    .recent-activity-footer{
+        font-size: 13px;
+        color: rgb(135, 134, 134);
+    }
+
+    .recent-activiy-overflow-container{
+        /* border: 1px solid red; */
+        width: 100%;
+        height: 350px;
+        overflow-y: scroll;
+        padding: 10px;
+    }
+
+/* Recent activity starts here */
+
+/* Scroll bar design starts here */
+
+  .recent-activiy-overflow-container::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .recent-activiy-overflow-container::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    
+  }
+   
+  .recent-activiy-overflow-container::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  .recent-activiy-overflow-container::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+/* Scroll bar design ends here */
+.export-div{
+   text-align: right;
+    padding: 50px 20px 20px 20px;
+    height: 10px;
+}
+.export-sr{
+    /* width: 70px;
+    height: 50px; */
+}
+
+/* .export-emp{
+    width: 100px;
+    font-size: 5px;
+} */
+
+
+/* Admin list modal style */
+
+.modal-header{
+    background-color: rgb(32, 73, 255);
+    color: white;
+    text-transform: uppercase;
+}
+
+.modal-header button{
+    color: white;
+}
+
+#registration-button{
+    background-color: green;
+    border-color: green;
+}
+
+/* table */
+
+.table-container-div{
+    /* border: 1px solid red; */
+}
+
+@media(min-width: 1400px){
+    .table-container-div{
+        height: 650px;
+    }
+
+}
